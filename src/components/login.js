@@ -5,14 +5,10 @@ export class Login extends Component {
     static displayName = Login.name;
 
     handleOnClick = () => {
-        this.setState({redirect:true});
+        this.props.history.push("/dashboard");
     }
 
 render(){
-
-    if(this.state.redirect){
-        return <redirect push to ="/dashboard"></redirect>
-    }
 
     return(
       <div>
